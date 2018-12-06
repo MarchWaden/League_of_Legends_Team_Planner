@@ -63,5 +63,18 @@ div {
 
 #Composition_name{
   text-align: center;
-  margin: 20px 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+.championPortraitAatrox{
+  padding: 30px;
+  background-image: url(./assets/championPortraitAatrox.png);
+}
+
+#Navbar{
+  padding: 20px;
+}
+
+#TopThree{
+  text-align: center;
 }

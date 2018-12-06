@@ -3,16 +3,7 @@ import champions from '../champion_data/champions.js';
 var ReactSuperSelect = require('react-super-select');
 
 var testData = champions;
-var handlerExample = function(option) {
-if(option != null){
-  var output = [
-    'Option Item Chosen = {\n',
-    '\tid: ', option.id, '\n',
-    '\tname: ', option.name, '\n',
-    '\tsize: ', option.size, '\n\t};'];
-  console.log(output.join(''));
-}
-};
+
 
 
 class Selection extends Component {
@@ -23,8 +14,11 @@ class Selection extends Component {
   render(){
     return(
       <ReactSuperSelect
+                  clearSearchOnSelection={true}
+                  deselectOnSelectedOptionClick={false}
                   dataSource={testData}
-                  onChange={handlerExample} />
+                  onChange={this.props.handlerExample.bind(null,this.props.role)}
+                  searchable={true}/>
     )
   }
 }
